@@ -1,0 +1,34 @@
+.code
+glob start
+
+@start
+
+mov A 5
+mov B 2
+call pow
+
+push D
+inv println
+
+halt
+
+; for(int i = 1; i < b; i++)
+; a *= a
+
+@pow
+push A
+push B
+push C
+mov D A
+mov C 1
+@pow_loop
+mul D A
+inc C
+cmp C B
+jl pow_loop
+
+pop C
+pop B
+pop A
+
+ret

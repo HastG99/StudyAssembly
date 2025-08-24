@@ -1,0 +1,10 @@
+mov IP 0
+mov A 5
+mov B 3
+add A B
+mov D 10
+inc D
+dec A
+
+mul A D
+div A B

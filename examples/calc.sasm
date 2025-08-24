@@ -1,0 +1,80 @@
+.data
+status 0
+
+.code
+glob start
+
+; Simple calculator
+; Supported operations:
+; 1 - add
+; 2 - sub
+; 3 - mul
+; 4 - div
+
+@start
+
+; get 1st number
+inv get
+pop A
+
+; get 2st number
+inv get
+pop B
+
+; get operation (1-4)
+inv get
+pop C
+
+; reset A reg
+xor A A
+
+cmp C 1
+je add
+cmp C 2
+je sub
+cmp C 3
+je mul
+cmp C 4
+je div
+
+; set status to "invalid choice"
+mov status 2
+jmp exit
+
+@add
+add A B
+jmp exit
+
+@sub
+sub A B
+jmp exit
+
+@mul
+mul A B
+jmp exit
+
+@div
+cmp B 0
+je div_zero
+
+div A B
+jmp exit
+
+@div_zero
+mov status 1
+jmp exit
+
+@exit
+
+; print result stored in A reg
+push A
+inv println
+
+; print status
+; 0 - success
+; 1 - divide by zero
+; 2 - invalid choice
+push status
+inv println
+
+halt

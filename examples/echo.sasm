@@ -1,0 +1,7 @@
+.code
+
+glob start
+
+@start
+inv get
+inv println

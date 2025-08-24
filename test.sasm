@@ -1,0 +1,17 @@
+.data
+var1 -FFh
+
+.code
+glob start
+
+@start
+
+halt
+
+@sum
+add A B
+ret
+
+@mul
+mul A B
+ret

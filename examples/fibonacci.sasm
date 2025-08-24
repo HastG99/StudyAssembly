@@ -1,0 +1,50 @@
+.data
+previous ?
+current ?
+
+.code
+
+glob start
+
+@start
+
+; get N
+inv get
+pop B
+
+call fib
+
+push A
+inv println
+
+halt
+
+
+@fib
+push B
+push C
+push D
+mov A 1
+
+; reset variables
+mov previous 0
+mov current 0
+
+; reset counter
+xor C C
+
+@loop
+add A previous ; A = current + previous
+mov D current ; previous = current
+mov previous D
+mov current A
+
+inc C
+cmp C B
+jl loop
+
+pop D
+pop C
+pop B
+
+ret
