@@ -93,11 +93,9 @@ jmp start   ; Jump to label
 
 ## 📚 Documentation
 
-Full documentation is available in [**DOCUMENTATION.MD**](DOCUMENTATION.MD) including:
-- 📖 Complete instruction set reference
-- 🧠 Memory model explanation
-- 🔧 Standard library functions
-- 🐛 Debugging guide
+Full documentation is available in:
+- [**DOCUMENTATION.MD**](DOCUMENTATION.MD): Complete instruction set reference, memory model explanation, standard library functions, and debugging guide
+- [**CONTRIBUTE.MD**](CONTRIBUTE.MD): Developer contribution guidelines and technical documentation
 
 ## 🤝 Contributing
 
@@ -106,6 +104,8 @@ Contributions are welcome! Feel free to:
 2. 🌿 Create a feature branch
 3. 💻 Make your changes
 4. 📤 Submit a pull request
+
+For detailed contribution guidelines, please see [CONTRIBUTE.MD](CONTRIBUTE.MD).
 
 ## 📄 License
 
