@@ -93,7 +93,7 @@ jmp start   ; Jump to label
 
 ## 📚 Documentation
 
-Full documentation is available in [**DOCUMENTATION.md**](DOCUMENTATION.md) including:
+Full documentation is available in [**DOCUMENTATION.MD**](DOCUMENTATION.MD) including:
 - 📖 Complete instruction set reference
 - 🧠 Memory model explanation
 - 🔧 Standard library functions
